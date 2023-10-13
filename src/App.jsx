@@ -1,14 +1,23 @@
-import Footer from './components/Footer';
-import Nav from './components/Nav';
-function App() {
+import Home from './components/Home';
+
+import { Routes, BrowserRouter, Route } from 'react-router-dom';
+import NotFound from './components/PageNotFound';
+export default function App() {
 	return (
 		<>
-			<div className='bg-brand-700 font-sans leading-normal tracking-normal min-h-screen'>
-				<Nav />
-			</div>
-			{/* <Footer /> */}
+			<BrowserRouter>
+				<Routes>
+					<Route
+						path='/'
+						element={<Home />}
+					/>
+					<Route
+						path='*'
+						element={<NotFound />}
+					/>
+				</Routes>
+			</BrowserRouter>
 		</>
 	);
 }
-
-export default App;
+	

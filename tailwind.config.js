@@ -21,6 +21,7 @@ export default {
 				textDark: '#16171b',
 				bgDark: '#111827',
 				bgLight: '#ffffff',
+				brandPrimary: '#00D8A5',
 			},
 		},
 	},

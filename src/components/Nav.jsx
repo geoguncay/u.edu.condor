@@ -5,7 +5,6 @@ import {
 	FingerPrintIcon,
 	CursorArrowRaysIcon,
 	ChartPieIcon,
-	ArrowPathIcon,
 	SquaresPlusIcon,
 	XMarkIcon,
 } from '@heroicons/react/24/outline';
@@ -51,10 +50,9 @@ function classNames(...classes) {
 }
 
 export default function Nav() {
-	const [mobileMenuOpen, setMobileMenuOpen, rotate, setRotate] =
-		useState(false);
+	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 	return (
-		<header className='bg-white'>
+		<header className='bg-white border-b-2 border-yellow-500'>
 			<nav
 				className='mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8'
 				aria-label='Global'
@@ -75,7 +73,7 @@ export default function Nav() {
 				<div className='flex lg:hidden'>
 					<button
 						type='button'
-						className='-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700'
+						className='-m-2.5 inline-flex rounded-md p-2.5 text-gray-700'
 						onClick={() => setMobileMenuOpen(true)}
 					>
 						<span className='sr-only'>Open main menu</span>
@@ -88,14 +86,14 @@ export default function Nav() {
 				<Popover.Group className='hidden lg:flex lg:gap-x-12 align-middle'>
 					<a
 						href='#'
-						className='text-sm font-semibold leading-6 text-gray-900'
+						className='text-sm font-semibold leading-6 text-gray-900 flex items-center '
 					>
 						Inicio
 					</a>
 					<Popover className='relative'>
 						{({ open }) => (
 							<>
-								<Popover.Button className='flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900'>
+								<Popover.Button className='flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 p-2'>
 									Institución
 									<ChevronRightIcon
 										className={classNames(
@@ -149,19 +147,19 @@ export default function Nav() {
 					</Popover>
 					<a
 						href='#'
-						className='text-sm font-semibold leading-6 text-gray-900'
+						className='text-sm font-semibold leading-6 text-gray-900 flex items-center '
 					>
 						Profesores
 					</a>
 					<a
 						href='#'
-						className='text-sm font-semibold leading-6 text-gray-900'
+						className='text-sm font-semibold leading-6 text-gray-900 flex items-center '
 					>
 						Preguntas Frecuentes
 					</a>
 					<a
 						href='#'
-						className='text-sm font-semibold leading-6 text-gray-900'
+						className='text-sm font-semibold leading-6 text-gray-900 flex items-center '
 					>
 						Contactos
 					</a>
@@ -202,7 +200,7 @@ export default function Nav() {
 					</div>
 					<div className='mt-6 flow-root'>
 						<div className='-my-6 divide-y divide-gray-500/10'>
-							<div className='space-y-2 py-6 flex flex-col'>
+							<div className='space-y-2 py-6 flex flex-col divide-y divide-brand-800'>
 								<a
 									href='#'
 									className='text-base font-semibold leading-7 text-gray-900'
@@ -225,13 +223,13 @@ export default function Nav() {
 													aria-hidden='true'
 												/>
 											</Disclosure.Button>
-											<Disclosure.Panel className='mt-2 space-y-2'>
+											<Disclosure.Panel className='mt-2 space-y-2 divide-y divide-brand-800'>
 												{[...products].map((item) => (
 													<Disclosure.Button
 														key={item.name}
 														as='a'
 														href={item.href}
-														className='block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50'
+														className='block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50 '
 													>
 														{item.name}
 													</Disclosure.Button>
