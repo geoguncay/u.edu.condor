@@ -1,51 +1,6 @@
 import Maps from './Maps';
-import {
-	HomeIcon,
-	EnvelopeIcon,
-	DevicePhoneMobileIcon,
-} from '@heroicons/react/24/outline';
-
-const institution = [
-	{
-		name: 'Código Convivencia',
-		description: '',
-		href: '#',
-	},
-	{
-		name: 'Símbolos',
-		description: '',
-		href: '#',
-	},
-	{
-		name: 'Misión y Visión',
-		description: '',
-		href: '#',
-	},
-	{
-		name: 'Reseña Histórica',
-		description: '',
-		href: '#',
-	},
-];
-
-const contact = [
-	{
-		info: 'LIMÓN INDANZA',
-		icon: <HomeIcon />,
-	},
-	{
-		info: 'WARINTZ - 140353',
-		icon: '',
-	},
-	{
-		info: 'info@example.com',
-		icon: <EnvelopeIcon />,
-	},
-	{
-		info: '+ 593 234 567 88',
-		icon: <DevicePhoneMobileIcon />,
-	},
-];
+import institution from '../data/institution';
+import contact from '../data/contact';
 
 export default function Footer() {
 	return (
@@ -80,67 +35,69 @@ export default function Footer() {
 			</div>
 			{/* Footer content */}
 			<div className='mx-6 py-10 text-center md:text-left'>
-				<div className='grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4'>
-					{/* <!-- Tailwind Elements section --> */}
-					<div className=''>
-						<h6 className='mb-4 flex items-center justify-center font-semibold uppercase md:justify-start'>
-							Comunícate con nosotros
+				{/* lg:divide-x lg:divide-brand-800 */}
+				<div className='grid-1 grid md:grid-cols-2 lg:grid-cols-4 gap-8 '>
+					{/* <!-- Compromiso --> */}
+					<div className='bg-transparent'>
+						<h6 className='mb-4 flex justify-center font-semibold uppercase md:justify-start'>
+							Nuestro Compromiso
 						</h6>
-						<p>
-							Trabajamos día a día para hacer de vuestra práctica educativa la
+						<p className='flex justify-center md:pl-4 p-1 md:justify-start'>
+							Trabajar día a día para hacer de vuestra práctica educativa la
 							mejor experiencia, replanteando y estructurando el proceso de
 							enseñanza - aprendizaje acorde las nuevas exigencias de la
 							sociedad, haciendo de la Unidad Educativa el mejor lugar para
 							aprender, para crecer, para ser felices...
 						</p>
 					</div>
-					{/* <!-- institution section --> */}
-					<div className=''>
+					{/* <!-- Institución --> */}
+					<div className='bg-transparent'>
 						<h6 className='mb-4 flex justify-center font-semibold uppercase md:justify-start'>
 							Institución
 						</h6>
 						{institution.map((item) => (
-							<p
-								className='mb-4'
+							<div
+								className='flex justify-center md:pl-4 p-1 md:justify-start'
 								key={item.name}
 							>
 								<a
 									href={item.href}
-									className='text-neutral-600 dark:text-neutral-200'
+									className='text-neutral-600 dark:text-neutral-200 md:pl-4 p-2 hover:text-brand-500'
 								>
 									{item.name}
 								</a>
-							</p>
+							</div>
 						))}
 					</div>
-					{/* <!-- Useful links section --> */}
-					<div className=''>
+					{/* <!-- Mapa --> */}
+					<div className='bg-transparent'>
 						<Maps />
 					</div>
-					{/* <!-- Contact section --> */}
-					<div>
+					{/* <!-- Contacto --> */}
+					<div className='bg-transparent'>
 						<h6 className='mb-4 flex justify-center font-semibold uppercase md:justify-start'>
 							Contactos
 						</h6>
 						{contact.map((item) => (
-							<p
-								className='mb-4 flex items-center justify-center md:justify-start'
-								key={item.icon}
+							<div
+								className='flex justify-center md:pl-4 p-1 md:justify-start'
+								key={item.ifo}
 							>
-								<div className='mr-3 h-5 w-5'>{item.icon}</div>
-								{item.info}
-							</p>
+								<p className='text-neutral-600 dark:text-neutral-200 md:pl-4 p-2 hover:text-brand-500'>
+									{item.info}
+								</p>
+							</div>
 						))}
 					</div>
 				</div>
 			</div>
 
-			{/* <!--Copyright section--> */}
+			{/* <!--Copyright--> */}
 			<div className='bg-neutral-200 p-4 text-center dark:bg-bgDark border-t-2 border-yellow-500 '>
 				<span>© 2023 Copyright:</span>
 				<a
 					className='font-semibold text-neutral-600 dark:text-neutral-400 pl-2'
-					href='https://linkedin.com/geoguncay'
+					href='https://www.linkedin.com/in/geoguncay/'
 				>
 					Geo Guncay
 				</a>

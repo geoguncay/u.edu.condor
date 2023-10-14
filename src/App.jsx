@@ -1,4 +1,5 @@
 import Home from './components/Home';
+import Faqs from './components/FAQs';
 
 import { Routes, BrowserRouter, Route } from 'react-router-dom';
 import NotFound from './components/PageNotFound';
@@ -12,6 +13,10 @@ export default function App() {
 						element={<Home />}
 					/>
 					<Route
+						path='preguntas'
+						element={<Faqs />}
+					/>
+					<Route
 						path='*'
 						element={<NotFound />}
 					/>
@@ -20,4 +25,3 @@ export default function App() {
 		</>
 	);
 }
-	

@@ -1,4 +1,4 @@
-// images.js
+
 export const images = [
 	{
 		name: 'image1',
