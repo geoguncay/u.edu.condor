@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { Dialog, Disclosure, Popover } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
-import logo from '../assets/cordilleraCondor.jpg';
+import logo from '../assets/img/logo.jpg';
 import menu from '../data/menu';
 import submenu from '../data/submenu';
 import MenuPover from './MenuPover';
@@ -101,7 +101,7 @@ export default function Nav() {
 						<div className='-my-6 divide-y divide-gray-500/10'>
 							<div className='space-y-2 py-6 flex flex-col divide-y divide-brand-800'>
 								<a
-									href='#'
+									href='/'
 									className='text-base font-semibold leading-7 text-gray-900'
 								>
 									Inicio
@@ -113,7 +113,7 @@ export default function Nav() {
 									{({ open }) => (
 										<>
 											<Disclosure.Button className='flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'>
-												Institución 
+												Institución
 												<ChevronDownIcon
 													className={classNames(
 														open ? 'rotate-180' : '',
@@ -138,10 +138,10 @@ export default function Nav() {
 									)}
 								</Disclosure>
 								<a
-									href='#'
+									href='/docentes'
 									className='text-base font-semibold leading-7 text-gray-900'
 								>
-									Profesores
+									Docentes
 								</a>
 								<a
 									href='/preguntas'
@@ -150,7 +150,7 @@ export default function Nav() {
 									Preguntas Frecuentes
 								</a>
 								<a
-									href='#'
+									href='/contactos'
 									className='text-base font-semibold leading-7 text-gray-900'
 								>
 									Contactos

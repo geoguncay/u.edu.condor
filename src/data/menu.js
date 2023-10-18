@@ -1,8 +1,8 @@
 const menu = [
 	{ name: 'Inicio', href: '/', current: true },
 	{
-		name: 'Profesores',
-		href: '/profesores',
+		name: 'Docentes',
+		href: '/docentes',
 		current: false,
 	},
 	{

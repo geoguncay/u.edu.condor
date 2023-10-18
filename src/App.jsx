@@ -1,8 +1,10 @@
 import Home from './components/Home';
 import Faqs from './components/FAQs';
-
-import { Routes, BrowserRouter, Route } from 'react-router-dom';
+import Teachers from './components/Teachers';
 import NotFound from './components/PageNotFound';
+import { Routes, BrowserRouter, Route } from 'react-router-dom';
+import Contact from './components/Contact';
+
 export default function App() {
 	return (
 		<>
@@ -15,6 +17,14 @@ export default function App() {
 					<Route
 						path='preguntas'
 						element={<Faqs />}
+					/>
+					<Route
+						path='docentes'
+						element={<Teachers />}
+					/>
+					<Route
+						path='contactos'
+						element={<Contact />}
 					/>
 					<Route
 						path='*'
