@@ -23,27 +23,22 @@ export default function Faqs() {
 	return (
 		<>
 			<Nav />
-			<div className='bg-gradient-to-b from-bgDark from-9% via-brand-800 via-50% to-brand-600 to-9% font-sans leading-normal tracking-normal min-h-screen !w-full p-16'>
-				<div className='mx-auto w-full max-w-md rounded-2xl p-2 bg-brand-500'>
-					{faq.map((faq) => (
-						<Disclosure key={faq.id}>
-							{({ open }) => (
-								<>
-									<Disclosure.Button className='flex w-full justify-between rounded-lg bg-bgDark px-4 py-2 text-left text-sm font-medium text-textLight hover:bg-brand-800 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75 mb-4'>
-										<p>{faq.question}</p>
-										<ChevronUpIcon
-											className={`${
-												open ? 'rotate-180 transform' : ''
-											} h-5 w-5 text-brandPrimary`}
-										/>
-									</Disclosure.Button>
-									<Disclosure.Panel className='px-4 pt-4 pb-5 text-sm text-gray-900'>
-										{renderWithLineBreaks(faq.answer)}
-									</Disclosure.Panel>
-								</>
-							)}
-						</Disclosure>
-					))}
+			<div className='w-screen flex justify-center bg-gradient-to-b from-bgDark from-9% via-brand-800 via-50% to-brand-600 to-9% font-sans leading-normal tracking-normal min-h-screen text-gray-50 pt-16 pb-16'>
+				<div className='w-3/5'>
+					<h1 className='text-center text-red-300 m-10'>Preguntas</h1>
+					<div className='grid gap-5 lg:grid-cols-2  md:grid-col grid-col '>
+						{faq.map((item) => (
+							<div
+								key={item.id}
+								className='hover:bg-brand-800 p-2 rounded-lg'
+							>
+								<h3 className='flex w-full justify-between rounded-lg bg-bgDark px-4 py-2 text-left text-sm font-medium text-textLight  mb-4'>
+									{item.question}
+								</h3>
+								<p>{item.answer}</p>
+							</div>
+						))}
+					</div>
 				</div>
 			</div>
 			<Footer />

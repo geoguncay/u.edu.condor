@@ -58,7 +58,7 @@ export default function Footer() {
 						{institution.map((item) => (
 							<div
 								className='flex justify-center md:pl-4 p-1 md:justify-start'
-								key={item.name}
+								key={item.id}
 							>
 								<a
 									href={item.href}
@@ -81,7 +81,7 @@ export default function Footer() {
 						{contact.map((item) => (
 							<div
 								className='flex justify-center md:pl-4 p-1 md:justify-start'
-								key={item.ifo}
+								key={item.id}
 							>
 								<p className='text-neutral-600 dark:text-neutral-200 md:pl-4 p-2 hover:text-brand-500'>
 									{item.info}
