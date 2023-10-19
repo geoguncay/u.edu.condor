@@ -23,6 +23,9 @@ export default {
 				bgLight: '#ffffff',
 				brandPrimary: '#00D8A5',
 			},
+			backgroundImage: {
+				warintza: "url('/src/assets/img/warintza.jpeg')",
+			},
 		},
 	},
 	plugins: [],
