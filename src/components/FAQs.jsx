@@ -1,23 +1,8 @@
-import React from 'react';
-import { Disclosure } from '@headlessui/react';
 import { ChevronUpIcon } from '@heroicons/react/20/solid';
 import Nav from './Nav';
 import Footer from './Footer';
 import faq from '../data/faqs';
 
-const renderWithLineBreaks = (text) => {
-	// Dividimos la cadena por el carácter \n y obtenemos un arreglo de subcadenas
-	const lines = text.split('\n');
-	// Usamos el método map para transformar cada subcadena en un elemento JSX con un <br/> al final
-	const jsxLines = lines.map((line, index) => (
-		<React.Fragment key={index}>
-			{line}
-			<br />
-		</React.Fragment>
-	));
-	// Retornamos el arreglo de elementos JSX
-	return jsxLines;
-};
 
 export default function Faqs() {
 	return (
