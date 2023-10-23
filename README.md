@@ -2,8 +2,6 @@
 
 Pagina Web para la Unida Educativa
 
-## Grupo de desarrollo
-
 ## Frameworks utilizados
 
 - React

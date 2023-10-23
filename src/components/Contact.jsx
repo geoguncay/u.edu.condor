@@ -1,7 +1,6 @@
 import Footer from './Footer';
 import Nav from './Nav';
 import schedule from '../data/schedule.js';
-import warintza from '../assets/img/warintza.jpeg';
 
 export default function Contact() {
 	return (
